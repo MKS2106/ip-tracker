@@ -19,7 +19,7 @@ function App() {
     setNewIp(searchIp)
     // setSearchIp("");
   }
- if (error) return <h2>Error</h2>;
+ if (error) return <h2>Error Message</h2>;
    const value = data?.ip[0];
 
   if (loading || !value)
