@@ -18,8 +18,9 @@ function App() {
   };
   //  const value = data?.ip[0];
   if (error) {
+    console.log(error.message)
     return (
-      <h2>
+      <h2 className="text-2xl font-semibold text-center whitespace-pre-line">
         {error.message.includes("Invalid")
           ? "Invalid IP Address. Please enter a valid IP address."
           : error.message}
@@ -59,6 +60,7 @@ function App() {
             <img src="/icon-arrow.svg" alt="search" className="w-8 h-8"/>
           </button>
         </form>
+
       </div>
         <div className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[90%] max-w-5xl bg-white rounded-lg shadow-xl p-6 flex flex-wrap justify-between text-gray-800">
             
