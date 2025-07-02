@@ -19,7 +19,7 @@ function App() {
   //  const value = data?.ip[0];
   if (error) {
     return (
-      <h2>
+      <h2 className="text-2xl font-semibold text-center justify-center whitespace-pre-line">
         {error.message.includes("Invalid")
           ? "Invalid IP Address. Please enter a valid IP address."
           : error.message}
