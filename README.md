@@ -1,12 +1,72 @@
-# React + Vite
+# Recipe Discovery App
+This is an application built using **React**, **Vite**, **TypeScript**, and **Tailwind CSS**. This is bulit using TheMealDB API.  The application will allow users to browse recipes by category, search for specific recipes, view detailed recipe information, and manage a personal list of “favorite” recipes.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objective
+- Implement state management, Custom Hooks, Global State with Context API, Data fetching and Routing
+- Build components that render recipes in a home page, Filter Categories, provide funtionality to maintain a favrites list
+- Provide search functionality.
 
-Currently, two official plugins are available:
+# Your users should be able to:
+- See/Browse all the recipes available
+- Let users navigate to a specific category from home page and view recipes by category
+- Let users to navigate to a particular recipe detail page from a category page
+- Add a recipe to its favorite list/page, remove a recipe from favorite list
+- Search for a recipe based on recipe name
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
+<pre>
+ip-tracker/
+├── src/
+│   ├── components/              
+│   ├── context/                
+│   │   └── Map.jsx
+│   ├── hooks/                   
+│   │   ├── useFetch.jsx
+│   │   
+│   ├── App.jsx                  
+│   └── main.jsx                 
+├── package.json</pre>
+  
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Pre-Requisite 
+- Ensure you have a recent LTS (Long-Term Support) version of Node.js installed. Node.js includes npm (Node Package Manager). - You can verify your installation by opening your terminal or command prompt and running:
+    " node -v "
+    " npm -v "
+
+- Ensure you have installed Tailwind for Vite'
+- Ensure you have installed react router DOM(npm i react-router-dom)
+- Ensure Leaflet plugin is Installed with the command "npm install react-leaflet"
+- Set and Provide the API key through Environment file(.env.local)
+
+## How to Run
+#### Locally: 
+1. Clone or download the project.
+2. Navigate (cd) to the project folder
+3. Install Dependencies run "npm install"
+4. Start the development server by running "npm run dev"
+5. Open the link in browser
+![alt text](<Screenshot 2025-07-02 145215.png>)
+
+#### Live Demo:
+- Since the
+
+## API Reference and Endpoints
+ #### The following endpoints are available for use, but are only examples. You will need to explore the API documentation  and use the endpoints that best fit the needs of your application.
+- List all categories: https://www.themealdb.com/api/json/v1/1/categories.php
+- Filter by category: https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+- Lookup full recipe details by ID: https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772
+- Search meal by name: https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
+
+
+## Reflection:
+#### The most Challenging Part:
+- One of the most challenging aspects was implementing custom hooks and properly configuring the Context Provider — particularly wrapping the app's children with the FavoriteContext so the state could be accessed globally.
+- I created reusable hooks like useFetch and useLocalStorage to avoid repeating state and effect logic, especially since API calls and local storage interactions occurred in multiple components. This helped keep the code clean, modular, and easy to test.
+- Designing the routing and navigation flow also required careful planning. Since the app’s core features were clearly defined, I structured the pages and routes to follow a logical and intuitive user journey — from the homepage to category browsing, detailed recipe views, search, and favorites.
+
+
+
+
+
+
