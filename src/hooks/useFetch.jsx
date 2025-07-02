@@ -17,7 +17,7 @@ function useFetch(url, options) {
       try {
         const response = await fetch(url, { ...options, signal: controller.signal });
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(`HTTP error! status: ${response.status} Note: The API and the end point are only for Development Purpose as it Invloves. Hence the Request is "Forbidden"`);
         }
         const result = await response.json();
         console.log(result)
