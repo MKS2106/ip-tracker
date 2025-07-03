@@ -51,11 +51,11 @@ ip-tracker/
 -Vercel
 
 ## Reflection:
-- Developing this IP Address Tracker was a great opportunity for me to apply my knowledge of web development and API integration that I learnt so far in a practical, real word scenario. The primary objective was to build a functional web application that could retrieve and display location data based on a user's IP address, along with an interactive map for better visualization. For which i used Components, hooks techniques and states to manage the data and state flow between components.
+- Developing this IP Address Tracker was a great opportunity for me to apply my skills of web development and API integration that I learnt so far in a practical, real word scenario. The primary objective was to build a functional web application that could retrieve and display location data based on a user's IP address, along with an interactive map for better visualization. I used React components, hooks, and context to manage state and data flow across the app effectively..
 
-- The challenge I facesd was integrating Leaflet.js. I used Leaflet.js to render map. It needed careful attention. Leaflet.js provided an intuitive way to display coordinates on an interactive map. However, ensuring the map updated correctly with new IP inputs required managing state effectively and re-rendering map components appropriately.
+- One of the main challenges I faced was integrating Leaflet.js. I used Leaflet.js to render map. It needed careful attention. Leaflet.js provided an intuitive way to display coordinates on an interactive map. However, ensuring the map updated correctly with new IP inputs required managing state effectively and re-rendering map components appropriately.
 
-- Designing the UI was anothet challenging factor for me but it also helped me to master tailwind classes very well.
+- Designing the UI was another challenging area for me. Ensuring responsiveness across screen sizes and achieving a clean, intuitive layout took several iterations.At the same time, it also helped me to master tailwind classes very well.
 
 - While the app is fully functional, there are several areas I’d like to improve. Adding features like dark mode, IP input validation, and error handling for failed requests would enhance the user experience.
 
