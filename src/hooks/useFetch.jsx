@@ -17,9 +17,9 @@ function useFetch(url, options) {
       try {
         const response = await fetch(url, { ...options, signal: controller.signal });
         if (!response.ok) {
-          const message = "Note: The usage of API and the end point are only for Development Purposes. Hence the ERROR"
+          const message = getErrorMessage(response.status)
           throw new Error(
-            `HTTP error! status: ${response.status}\n${message}`
+            `HTTP error! status: ${response.status}\n\n${message}`
           );
         }
         const result = await response.json();
@@ -46,3 +46,15 @@ function useFetch(url, options) {
 }
  
 export default useFetch;
+
+function getErrorMessage(statuscode){
+  const messages = {
+    400: "Bad Request - invalid request",
+    401: "Unauthorised", 
+    403: "Forbidden — You do not have permission to access this resource.",
+    404: "Not Found-The server cannot find the requested resource.",
+    422: "Unprocessable Content",
+    500: "Internal Server Error"
+  }
+  return messages[statuscode] || "Unexpected Error Occurred"
+}

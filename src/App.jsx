@@ -19,11 +19,13 @@ function App() {
   if (error) {
     console.log(error.message);
     return (
+      <div className=" w-screen h-screen bg-violet-200 flex justify-center items-center p-6">
       <h2 className="text-2xl font-semibold text-center whitespace-pre-line">
         {error.message.includes("Invalid")
           ? "Invalid IP Address. Please enter a valid IP address."
           : error.message}
       </h2>
+      </div>
     );
   }
 
