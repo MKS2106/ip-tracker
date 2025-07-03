@@ -1,17 +1,11 @@
-# Recipe Discovery App
-This is an application built using **React**, **Vite**, **TypeScript**, and **Tailwind CSS**. This is bulit using TheMealDB API.  The application will allow users to browse recipes by category, search for specific recipes, view detailed recipe information, and manage a personal list of “favorite” recipes.
+# IP Address Tracker
+An IP Tracker web application that allows users to retrieve detailed information about any IP address, including geolocation, ISP, timezone, and more.
 
-## Objective
-- Implement state management, Custom Hooks, Global State with Context API, Data fetching and Routing
-- Build components that render recipes in a home page, Filter Categories, provide funtionality to maintain a favrites list
-- Provide search functionality.
-
-# Your users should be able to:
-- See/Browse all the recipes available
-- Let users navigate to a specific category from home page and view recipes by category
-- Let users to navigate to a particular recipe detail page from a category page
-- Add a recipe to its favorite list/page, remove a recipe from favorite list
-- Search for a recipe based on recipe name
+## Features
+- See their own IP Address on the map on the initial page load
+- Search for any IP addresses or domains and see the key information and location
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements on the page
 
 ## Project Structure
 <pre>
@@ -33,7 +27,6 @@ ip-tracker/
 - Ensure you have a recent LTS (Long-Term Support) version of Node.js installed. Node.js includes npm (Node Package Manager). - You can verify your installation by opening your terminal or command prompt and running:
     " node -v "
     " npm -v "
-
 - Ensure you have installed Tailwind for Vite'
 - Ensure you have installed react router DOM(npm i react-router-dom)
 - Ensure Leaflet plugin is Installed with the command "npm install react-leaflet"
@@ -49,24 +42,20 @@ ip-tracker/
 ![alt text](<Screenshot 2025-07-02 145215.png>)
 
 #### Live Demo:
-- Since the
+- https://ip-tracker-lilac-one.vercel.app/
 
-## API Reference and Endpoints
- #### The following endpoints are available for use, but are only examples. You will need to explore the API documentation  and use the endpoints that best fit the needs of your application.
-- List all categories: https://www.themealdb.com/api/json/v1/1/categories.php
-- Filter by category: https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
-- Lookup full recipe details by ID: https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772
-- Search meal by name: https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
-
+## Deployment
+#### You can deploy the app easily using platforms like:
+- GitHub Pages
+- Netlify
+-Vercel
 
 ## Reflection:
-#### The most Challenging Part:
-- One of the most challenging aspects was implementing custom hooks and properly configuring the Context Provider — particularly wrapping the app's children with the FavoriteContext so the state could be accessed globally.
-- I created reusable hooks like useFetch and useLocalStorage to avoid repeating state and effect logic, especially since API calls and local storage interactions occurred in multiple components. This helped keep the code clean, modular, and easy to test.
-- Designing the routing and navigation flow also required careful planning. Since the app’s core features were clearly defined, I structured the pages and routes to follow a logical and intuitive user journey — from the homepage to category browsing, detailed recipe views, search, and favorites.
+- Developing this IP Address Tracker was a great opportunity for me to apply my knowledge of web development and API integration that I learnt so far in a practical, real word scenario. The primary objective was to build a functional web application that could retrieve and display location data based on a user's IP address, along with an interactive map for better visualization. For which i used Components, hooks techniques and states to manage the data and state flow between components.
 
+- The challenge I facesd was integrating Leaflet.js. I used Leaflet.js to render map. It needed careful attention. Leaflet.js provided an intuitive way to display coordinates on an interactive map. However, ensuring the map updated correctly with new IP inputs required managing state effectively and re-rendering map components appropriately.
 
+- Designing the UI was anothet challenging factor for me but it also helped me to master tailwind classes very well.
 
-
-
+- While the app is fully functional, there are several areas I’d like to improve. Adding features like dark mode, IP input validation, and error handling for failed requests would enhance the user experience.
 
